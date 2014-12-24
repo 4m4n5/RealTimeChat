@@ -1,7 +1,8 @@
 window.onload = function() {
  
     var messages = [];
-    var socket = io.connect('https://desolate-river-8127.herokuapp.com/');
+    var serverBaseUrl = document.domain;
+    var socket = io.connect(serverBaseUrl);
     var field = document.getElementById("field");
     var sendButton = document.getElementById("send");
     var content = document.getElementById("content");
