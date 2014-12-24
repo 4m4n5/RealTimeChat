@@ -1,0 +1,11 @@
+{
+    "name": "RealTimeChat",
+    "version": "0.0.1",
+    "description": "Real time web chat using nodeJS, socket.io",
+    "dependencies": {
+        "socket.io": "latest",
+        "express": "latest",
+        "jade": "latest"
+    },
+    "author": "aman"
+}
