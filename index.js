@@ -1,6 +1,6 @@
 var express = require("express");
 var app = express();
-var port = 3700;
+var port = process.env.PORT || 3000;
 
 //informing express to use jade
 app.set('views', __dirname + '/tpl');
