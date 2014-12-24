@@ -1,5 +1,5 @@
 *{
-    font-family: Raleway;
+    font-family: monospace;
     font-size: 15px;
     letter-spacing: 1px;
 }
@@ -10,7 +10,7 @@
     padding: 20px;
     border-bottom: solid 2px #999;
     background-color: #D0E5F7;
-    font-family: 'Indie Flower', cursive;
+    font-family: monospace;
 }
 
 #content {
