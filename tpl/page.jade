@@ -1,15 +1,21 @@
 doctype
 html
     head
+        <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+        style
+            include main.css
         title= "Real time web chat"
         script(src= '/jquery-1.11.1.min.js')
         script(src= '/chat.js')
         script(src= '/socket.io/socket.io.js')
     body
-        #content(style='width: 500px; height: 300px; margin: 0 0 20px 0; border: solid 1px #999; overflow-y: scroll;')
+        .title Chat lulz!
+        input#name(placeholder= 'Name', style='width: 350px;')
+        br
+        #content(style='width: 498px; height: 298px; overflow-y: scroll;')
         .controls
-            | Name:
-            input#name(style='width: 350px;')
             br
             input.field(style='width:350px;', id="field")
             input.send(type='button', value='send', id="send")

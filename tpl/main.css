@@ -1,0 +1,31 @@
+*{
+    font-family: Raleway;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.title {
+    font-size: 40px;
+    text-align: center;
+    padding: 20px;
+    border-bottom: solid 2px #999;
+    background-color: #D0E5F7;
+    font-family: 'Indie Flower', cursive;
+}
+
+#content {
+    border: solid 1px #999;
+    padding: 5px;
+    margin-left: 423px;
+}
+
+#name{
+    margin-top: 60px;
+    margin-left: 496px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#field {
+    margin-left: 468px;
+}
