@@ -21,6 +21,10 @@ app.use(express.static(__dirname + '/public'));
 //listening to port
 //app.listen(port);
 
+//usernames currently in chat
+var usernames = {};
+var numUsers = 0;
+
 //starting socket.io integration
 var io = require('socket.io').listen(app.listen(port));
 
