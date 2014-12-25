@@ -19,7 +19,7 @@ window.onload = function() {
             content.innerHTML = html;
             content.scrollTop = content.scrollHeight;
         } else {
-            console.log("There is a problem:", data);
+            console.log("There is a problem: ", data);
         }
     });
     
@@ -34,7 +34,7 @@ window.onload = function() {
  
     sendButton.onclick = sendMessage = function() {
         if(name.value == ""){
-            alert("Please type your name! Douchebag");
+            alert("Please type your name, douchebag!");
         }
         else {
             var text = field.value;
