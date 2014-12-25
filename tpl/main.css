@@ -29,7 +29,7 @@
 input#name{
     width: 300px;
     overflow: hidden;
-   	margin-right: 20px;
+   	margin-right: 50px;
     padding: 7px 14px;
     border: 1px solid #ccc;
     border-radius: 100px;
@@ -48,17 +48,19 @@ input#name:focus {
 .numDisp-icon {
 	display: inline-block;
 	color: rgba(81, 203, 238, 1);
-	line-height: 34px;
-	font-size: 34px;
+	font-size: 28px;
 	margin: 0;
 	margin-right: 7px;
+}
+
+.numDisp-icon i.fa.fa-user {
+    color: rgba(81, 203, 238, 1);
 }
 
 #numDisp {
 	display: inline-block;
 	color: rgba(81, 203, 238, 1);
-	line-height: 34px;
-	font-size: 34px;
+	font-size: 28px;
 	margin: 0;
 }
 
@@ -71,6 +73,10 @@ input#name:focus {
     overflow-y: scroll;
     word-break: normal;
     border-radius: 5px;
+}
+
+p.chat-msg {
+    margin: 4px 0;
 }
 
 .controls {
