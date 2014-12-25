@@ -1,31 +1,89 @@
 *{
-    font-family: monospace;
+    font-family: 'Lato', sans-serif;
     font-size: 15px;
-    letter-spacing: 1px;
+    letter-spacing: normal;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
 .title {
+    width: 80%;
+    overflow: hidden;
     font-size: 40px;
     text-align: center;
     padding: 20px;
-    border-bottom: solid 2px #999;
-    background-color: #D0E5F7;
-    font-family: monospace;
-}
-
-#content {
-    border: solid 1px #999;
-    padding: 5px;
-    margin-left: 423px;
+    border-bottom: 1px solid #ccc;
+    margin: 0 auto;
+    background-color: #fff;
+    text-transform: uppercase;
 }
 
 #name{
-    margin-top: 60px;
-    margin-left: 496px;
-    text-align: center;
-    margin-bottom: 20px;
+    width: 300px;
+    overflow: hidden;
+    margin: 40px auto 20px auto;
+    padding: 7px 20px;
+    border: 1px solid #ccc;
+    border-radius: 100px;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
 }
 
-#field {
-    margin-left: 468px;
+input#name:focus {
+     border-color: rgba(81, 203, 238, 1) !important;
+}
+
+#content {
+    width: 498px;
+    height: 298px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 0 auto 20px auto;
+    overflow-y: scroll;
+    word-break: normal;
+    border-radius: 5px;
+}
+
+.controls {
+    margin: 0 auto 20px auto;
+    text-align: center;
+}
+
+input.field {
+    width: 299spx;
+    overflow: hidden;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-right-width: 0;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    padding: 7px 20px;
+    outline: none;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+}
+
+input.field:focus {
+    border-color: rgba(81, 203, 238, 1) !important;
+}
+
+input.send {
+    overflow: hidden;
+    padding: 8px 20px;
+    border: 1px solid rgba(81, 203, 238, 1);
+    border-left-width: 0;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    margin: 0;
+    background: rgba(81, 203, 238, 1);
+    color: #fff;
+    text-transform: capitalize;
+    cursor: pointer;
 }
