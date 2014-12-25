@@ -25,7 +25,7 @@ window.onload = function() {
     });
     
     socket.on('userNum', function (data) {
-        numDisp.innerHTML = data.userNum - 1;
+        numDisp.innerHTML = data.userNum;
     });
     
     //jQuery for listening to enter keypress
