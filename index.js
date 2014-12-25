@@ -31,7 +31,7 @@ var io = require('socket.io').listen(app.listen(port));
 //recieving message from client and sending to others
 io.sockets.on('connection', function (socket) {
     numUsers += 1;
-    socket.emit('userNum',{ userNum: numUsers });
+    socket.broadcast.emit('userNum',{ userNum: numUsers });
     socket.emit('message', { message: 'Welcome to Black Pigeon. A real time web chat engine!' });
     socket.on('send', function (data) {
         io.sockets.emit('message', data);
