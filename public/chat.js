@@ -12,8 +12,9 @@ window.onload = function() {
     socket.on('message', function (data) {
         if(data.message) {
             messages.push(data);
-            var html = '<p class="chat-msg">';
+            var html = '';
             for(var i=0; i<messages.length; i++) {
+                html += '<p class="chat-msg">';
                 html += '<strong>' + (messages[i].username ? messages[i].username : 'Three-Eyed Raven') + ': </strong>';
                 html += messages[i].message + '</p>';
             }
