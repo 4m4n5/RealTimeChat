@@ -14,8 +14,7 @@ window.onload = function() {
             messages.push(data);
             var html = '';
             for(var i=0; i<messages.length; i++) {
-                html += '<p class="chat-msg">';
-                html += '<strong>' + (messages[i].username ? messages[i].username : 'Three-Eyed Raven') + ': </strong>';
+                html += '<p class="chat-msg"><strong>' + (messages[i].username ? messages[i].username : 'Three-Eyed Raven') + ': </strong>';
                 html += messages[i].message + '</p>';
             }
             content.innerHTML = html;
