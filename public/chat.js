@@ -23,6 +23,10 @@ window.onload = function() {
         }
     });
     
+    socket.on('userNum', function (data) {
+        numDisp.innerHTML = data.userNum;
+    });
+    
     //jQuery for listening to enter keypress
     $(document).ready(function() {
         $("#field").keyup(function(e) {
