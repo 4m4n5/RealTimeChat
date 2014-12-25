@@ -36,13 +36,11 @@ io.sockets.on('connection', function (socket) {
     socket.on('send', function (data) {
         io.sockets.emit('message', data);
     });
+    
+    socket.on('disconnect', function(){
+        numUsers -= 1;
+        socket.broadcast.emit('userNum', { userNum: numUsers });
+    });
 });
-
-
-io.sockets.on('disconnect', function(socket){
-    numUsers -= 1;
-    socket.emit('userNum',{ userNum: numUsers });
-});
-
 
 console.log("Listening on port " + port);

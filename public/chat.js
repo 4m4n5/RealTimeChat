@@ -28,6 +28,7 @@ window.onload = function() {
         numDisp.innerHTML = data.userNum;
     });
     
+    
     //jQuery for listening to enter keypress
     $(document).ready(function() {
         $("#field").keyup(function(e) {
