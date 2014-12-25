@@ -12,10 +12,10 @@ window.onload = function() {
     socket.on('message', function (data) {
         if(data.message) {
             messages.push(data);
-            var html = '';
+            var html = '<p>';
             for(var i=0; i<messages.length; i++) {
-                html += '<b>' + (messages[i].username ? messages[i].username : 'Three-Eyed Raven') + ': </b>';
-                html += messages[i].message + '<br>';
+                html += '<strong>' + (messages[i].username ? messages[i].username : 'Three-Eyed Raven') + ': </strong>';
+                html += messages[i].message + '</p>';
             }
             content.innerHTML = html;
             content.scrollTop = content.scrollHeight;
