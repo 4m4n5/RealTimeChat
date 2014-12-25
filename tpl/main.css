@@ -20,11 +20,16 @@
     text-transform: uppercase;
 }
 
-#name{
+.name-wrapper {
+    margin: 20px auto;
+    text-align: center;
+}
+
+input#name{
     width: 300px;
     overflow: hidden;
-    margin: 40px auto 20px auto;
-    padding: 7px 20px;
+    margin-top: 20px;
+    padding: 7px 14px;
     border: 1px solid #ccc;
     border-radius: 100px;
     -webkit-transition: all 0.30s ease-in-out;
@@ -55,14 +60,14 @@ input#name:focus {
 }
 
 input.field {
-    width: 299spx;
+    width: 299px;
     overflow: hidden;
     margin: 0;
     border: 1px solid #ccc;
     border-right-width: 0;
     border-top-left-radius: 100px;
     border-bottom-left-radius: 100px;
-    padding: 7px 20px;
+    padding: 7px 14px;
     outline: none;
     -webkit-transition: all 0.30s ease-in-out;
     -moz-transition: all 0.30s ease-in-out;
@@ -76,7 +81,7 @@ input.field:focus {
 
 input.send {
     overflow: hidden;
-    padding: 8px 20px;
+    padding: 7px 20px;
     border: 1px solid rgba(81, 203, 238, 1);
     border-left-width: 0;
     border-top-right-radius: 100px;
