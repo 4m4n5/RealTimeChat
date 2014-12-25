@@ -21,7 +21,7 @@
     text-transform: uppercase;
 }
 
-.name-wrapper {
+.info-wrapper {
     margin: 20px auto;
     text-align: center;
 }
@@ -29,7 +29,7 @@
 input#name{
     width: 300px;
     overflow: hidden;
-    margin-top: 20px;
+   	margin-right: 20px;
     padding: 7px 14px;
     border: 1px solid #ccc;
     border-radius: 100px;
@@ -37,11 +37,29 @@ input#name{
     -moz-transition: all 0.30s ease-in-out;
     -ms-transition: all 0.30s ease-in-out;
     -o-transition: all 0.30s ease-in-out;
-    outline: none;
+	transition: all 0.30s ease-in-out;
+	font-weight: 300;
 }
 
 input#name:focus {
      border-color: rgba(81, 203, 238, 1) !important;
+}
+
+.numDisp-icon {
+	display: inline-block;
+	color: rgba(81, 203, 238, 1);
+	line-height: 34px;
+	font-size: 34px;
+	margin: 0;
+	margin-right: 7px;
+}
+
+#numDisp {
+	display: inline-block;
+	color: rgba(81, 203, 238, 1);
+	line-height: 34px;
+	font-size: 34px;
+	margin: 0;
 }
 
 #content {
@@ -69,27 +87,38 @@ input.field {
     border-top-left-radius: 100px;
     border-bottom-left-radius: 100px;
     padding: 7px 14px;
-    outline: none;
+    font-weight: 300;
     -webkit-transition: all 0.30s ease-in-out;
     -moz-transition: all 0.30s ease-in-out;
     -ms-transition: all 0.30s ease-in-out;
     -o-transition: all 0.30s ease-in-out;
+	transition: all 0.30s ease-in-out;
 }
 
 input.field:focus {
-    border-color: rgba(81, 203, 238, 1) !important;
+    border-color: #EB3349 !important;
 }
 
 input.send {
     overflow: hidden;
     padding: 7px 20px;
-    border: 1px solid rgba(81, 203, 238, 1);
+    border: 1px solid #EB3349;
     border-left-width: 0;
     border-top-right-radius: 100px;
     border-bottom-right-radius: 100px;
     margin: 0;
-    background: rgba(81, 203, 238, 1);
+    background: #EB3349;
     color: #fff;
     text-transform: capitalize;
     cursor: pointer;
+	font-weight: 300;
+	-webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+	transition: all 0.30s ease-in-out;
+}
+
+input.send:focus {
+	background: #333;	
 }

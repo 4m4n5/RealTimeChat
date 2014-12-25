@@ -14,13 +14,13 @@ window.onload = function() {
             messages.push(data);
             var html = '';
             for(var i=0; i<messages.length; i++) {
-                html += '<b>' + (messages[i].username ? messages[i].username : 'Server') + ': </b>';
+                html += '<b>' + (messages[i].username ? messages[i].username : 'Three-Eyed Raven') + ': </b>';
                 html += messages[i].message + '<br>';
             }
             content.innerHTML = html;
             content.scrollTop = content.scrollHeight;
         } else {
-            console.log("There is a problem: ", data);
+            console.log("We have a situation: ", data);
         }
     });
     

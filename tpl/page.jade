@@ -3,18 +3,21 @@ html
     head
         style
             include main.css
-        title= "Black Pigeon | Real Time Web Chat Engine"
+        title= "Raven | Real Time Web Chat Engine"
         script(src = '/jquery-1.11.1.min.js', type = 'text/javascript')
         script(src = '/chat.js', type = 'text/javascript')
         script(src = '/socket.io/socket.io.js', type = 'text/javascript')
         link(href = '//fonts.googleapis.com/css?family=Lato:300,400,700', rel='stylesheet', type = 'text/css')
+		link(href = "//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css", rel = "stylesheet")
     body
-        .title Black Pigeon
-        .name-wrapper
+        .title Raven
+        .info-wrapper
             input#name(type = "text", placeholder = 'And you are? (Name)')
+			.numDisp-icon
+				i.fa.fa-user
+			#numDisp
         #content
         .controls
             br
             input.field(type="text", id="field", placeholder="What's on your mind?")
             input.send(type="button", value="Send", id="send")
-            #numDisp
