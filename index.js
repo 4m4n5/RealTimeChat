@@ -49,8 +49,8 @@ mongo.connect('mongodb://aman:thermo999@ds063870.mongolab.com:63870/chat', funct
         socket.emit('userNum',{ userNum: numUsers });
         socket.broadcast.emit('userNum',{ userNum: numUsers });
         
-        //showing welcome message
-        socket.emit('message', { message: 'Welcome to Raven! A real time web chat engine.' });
+        //showing 'previous messagses' message
+        socket.emit('message', { message: '<span style="color:rgba(81,203,238,1); margin-left:50px; background:#fafafa;">Previous Messages</span>' });
         
         //on sending message
         socket.on('send', function (data) {
