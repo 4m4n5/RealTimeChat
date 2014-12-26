@@ -80,12 +80,12 @@ p.chat-msg {
 }
 
 .prev-msgs-welcome-msg {
-    width: 100%;
+    width: 98%;
     color: rgba(81,203,238,1);
     background: #fafafa;
     text-align: center;
     display: block;
-    padding: 4px;
+    padding: 1%;
 }
 
 .controls {
