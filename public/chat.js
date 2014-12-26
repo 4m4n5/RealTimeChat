@@ -6,15 +6,19 @@ window.onload = function() {
     var field = document.getElementById("field");
     var sendButton = document.getElementById("send");
     var content = document.getElementById("content");
+    var prevMsgs = document.getElementById("prevMsgs");
+    var newMsgs = document.getElementById("newMsgs");
     var name = document.getElementById("name");
     var numDisp = document.getElementById("numDisp");
     
     socket.on('output', function(data){
+        var oldMsg = '';
         if(data.length){
             for(var x = 0; x < data.length; x += 1){
-                messages[x].name = data[x].name;
-                messages[x].message = data[x].message;
+                oldMsg += '<p class="chat-msg"><strong>' + data[x].name + ': </strong>';
+                oldMsg += data[x].message + '</p>';
             }
+            prevMsgs.innerHTML = oldMsg;
         }
     });
    
@@ -26,7 +30,7 @@ window.onload = function() {
                 html += '<p class="chat-msg"><strong>' + (messages[i].name ? messages[i].name : 'Three-Eyed Raven') + ': </strong>';
                 html += messages[i].message + '</p>';
             }
-            content.innerHTML = html;
+            newMsgs.innerHTML = html;
             content.scrollTop = content.scrollHeight;
         } else {
             console.log("We have a situation: ", data);
