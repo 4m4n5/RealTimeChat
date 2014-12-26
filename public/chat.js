@@ -9,6 +9,17 @@ window.onload = function() {
     var name = document.getElementById("name");
     var numDisp = document.getElementById("numDisp");
     
+    socket.on('output', function(data){
+        if(data.length){
+            var prevMessage = '';
+            for(var x = 0; x < data.length; x += 1){
+                prevMessage += '<p class="chat-msg"><srtong>' + data[x].name + ': </strong>';
+                prevMessage += data[x].message + '</p>';
+            }
+            content.innerHTML = prevMessage;
+        }
+    });
+   
     socket.on('message', function (data) {
         if(data.message) {
             messages.push(data);
