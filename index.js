@@ -54,7 +54,9 @@ mongo.connect('mongodb://aman:thermo999@ds063870.mongolab.com:63870/chat', funct
         
         //on sending message
         socket.on('send', function (data) {
-            io.sockets.emit('message', data);
+            col.insert({ name: data.name, message: data.message }, function(){
+                io.sockets.emit('message', data);
+            });
         });
 
         //on disconnection
