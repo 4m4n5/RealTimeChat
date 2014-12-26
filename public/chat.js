@@ -44,10 +44,8 @@ window.onload = function() {
         }
         else {
             var text = field.value;
-            col.insert({ name: name.value, message: text }, function(){
-                socket.emit('send', { message: text, name: name.value });
-                field.value = "";
-            });
+            socket.emit('send', { message: text, name: name.value });
+            field.value = "";
         }
     };
  
