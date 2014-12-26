@@ -50,7 +50,7 @@ mongo.connect('mongodb://aman:thermo999@ds063870.mongolab.com:63870/chat', funct
         socket.broadcast.emit('userNum',{ userNum: numUsers });
         
         //showing 'previous messagses' message
-        socket.emit('message', { message: '<span style="color:rgba(81,203,238,1); padding: 0.5% 36%; background:#fafafa;">Previous Messages</span><strong> :</strong>' });
+        socket.emit('message', { message: '<span style="color:rgba(81,203,238,1); padding: 0.5% 36%; background:#fafafa;">Previous Messages</span>' });
         
         //on sending message
         socket.on('send', function (data) {
