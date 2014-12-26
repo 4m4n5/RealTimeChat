@@ -14,7 +14,7 @@ window.onload = function() {
             messages.push(data);
             var html = '';
             for(var i=0; i<messages.length; i++) {
-                html += '<p class="chat-msg"><strong>' + (messages[i].username ? messages[i].username : 'Three-Eyed Raven') + ': </strong>';
+                html += '<p class="chat-msg"><strong>' + (messages[i].name ? messages[i].name : 'Three-Eyed Raven') + ': </strong>';
                 html += messages[i].message + '</p>';
             }
             content.innerHTML = html;
@@ -44,8 +44,10 @@ window.onload = function() {
         }
         else {
             var text = field.value;
-            socket.emit('send', { message: text, username: name.value });
-            field.value = "";
+            col.insert({ name: name.value, message: text }, function(){
+                socket.emit('send', { message: text, name: name.value });
+                field.value = "";
+            });
         }
     };
  

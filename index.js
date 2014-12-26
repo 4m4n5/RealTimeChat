@@ -23,26 +23,41 @@ app.use(express.static(__dirname + '/public'));
 //app.listen(port);
 
 //usernames currently in chat
-var usernames = {};
+var names = {};
 var numUsers = 0;
 
 mongo.connect('mongodb://aman:thermo999@ds063870.mongolab.com:63870/chat', function(err, db){
     if (err) throw err;
-
-
-//starting socket.io integration
+    
+    //starting socket.io integration
     var io = require('socket.io').listen(app.listen(port));
 
     //recieving message from client and sending to others
     io.sockets.on('connection', function (socket) {
+        
+        //showing older messages
+        var col = db.collection('messages');
+        col.find().limit(100).sort({_id: 1}).toArray(function(err, res){
+            if(err) throw err;
+            socket.emit('message', res);
+        });
+        
+        
+        
+        //showing no of users on connection
         numUsers += 1;
         socket.emit('userNum',{ userNum: numUsers });
         socket.broadcast.emit('userNum',{ userNum: numUsers });
+        
+        //showing welcome message
         socket.emit('message', { message: 'Welcome to Raven! A real time web chat engine.' });
+        
+        //on sending message
         socket.on('send', function (data) {
             io.sockets.emit('message', data);
         });
 
+        //on disconnection
         socket.on('disconnect', function(){
             numUsers -= 1;
             socket.broadcast.emit('userNum', { userNum: numUsers });
