@@ -11,17 +11,18 @@ window.onload = function() {
     
     socket.on('output', function(data){
         if(data.length){
-            var prevMessage = '';
-            for(var x = 0; x < data.length; x += 1){
-                prevMessage += '<p class="chat-msg"><strong>' + data[x].name + ': </strong>';
-                prevMessage += data[x].message + '</p>';
-            }
-            content.innerHTML = prevMessage;
+//            var prevMessage = '';
+//            for(var x = 0; x < data.length; x += 1){
+//                prevMessage += '<p class="chat-msg"><strong>' + data[x].name + ': </strong>';
+//                prevMessage += data[x].message + '</p>';
+//            }
+//            content.innerHTML = prevMessage;
+            messages.push(data);
         }
     });
    
     socket.on('message', function (data) {
-        if(data.length) {
+        if(data.message) {
             messages.push(data);
             var html = '';
             for(var i=0; i<messages.length; i++) {
