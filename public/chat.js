@@ -11,13 +11,10 @@ window.onload = function() {
     
     socket.on('output', function(data){
         if(data.length){
-//            var prevMessage = '';
-//            for(var x = 0; x < data.length; x += 1){
-//                prevMessage += '<p class="chat-msg"><strong>' + data[x].name + ': </strong>';
-//                prevMessage += data[x].message + '</p>';
-//            }
-//            content.innerHTML = prevMessage;
-            messages.push(data);
+            for(var x = 0; x < data.length; x += 1){
+                messages[x].name = data[x].name;
+                messages[x].message = data[x].message;
+            }
         }
     });
    
