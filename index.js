@@ -37,8 +37,7 @@ mongo.connect('mongodb://aman:thermo999@ds063870.mongolab.com:63870/chat', funct
         
         //showing older messages
         var col = db.collection('messages');
-        col.find().limit(100).sort({_id: 1});
-        socket.emit('message', col);
+        socket.emit('message', col.find().limit(100).sort({_id: 1}));
         
         
         
