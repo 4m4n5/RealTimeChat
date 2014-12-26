@@ -13,7 +13,7 @@ window.onload = function() {
         if(data.length){
             var prevMessage = '';
             for(var x = 0; x < data.length; x += 1){
-                prevMessage += '<p class="chat-msg"><srtong>' + data[x].name + ': </strong>';
+                prevMessage += '<p class="chat-msg"><strong>' + data[x].name + ': </strong>';
                 prevMessage += data[x].message + '</p>';
             }
             content.innerHTML = prevMessage;
@@ -21,7 +21,7 @@ window.onload = function() {
     });
    
     socket.on('message', function (data) {
-        if(data.message) {
+        if(data.length) {
             messages.push(data);
             var html = '';
             for(var i=0; i<messages.length; i++) {
