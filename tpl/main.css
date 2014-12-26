@@ -79,6 +79,15 @@ p.chat-msg {
     margin: 4px 0;
 }
 
+.prev-msgs-welcome-msg {
+    width: 100%;
+    color: rgba(81,203,238,1);
+    background: #fafafa;
+    text-align: center;
+    display: block;
+    padding: 4px;
+}
+
 .controls {
     margin: 0 auto 20px auto;
     text-align: center;
