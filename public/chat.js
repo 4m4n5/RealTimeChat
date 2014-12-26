@@ -27,7 +27,7 @@ window.onload = function() {
             messages.push(data);
             var html = '';
             for(var i=0; i<messages.length; i++) {
-                html += '<p class="chat-msg"><strong>' + (messages[i].name ? messages[i].name : 'Server') + ': </strong>';
+                html += '<p class="chat-msg"><strong>' + (messages[i].name ? messages[i].name : '') + ': </strong>';
                 html += messages[i].message + '</p>';
             }
             newMsgs.innerHTML = html;
