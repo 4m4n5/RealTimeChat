@@ -27,7 +27,7 @@ window.onload = function() {
             messages.push(data);
             var html = '';
             for(var i=0; i<messages.length; i++) {
-                if (i !== 0 && messages[i].name[messages[i].name.length - 1] != ':') {
+                if (i !== 0 && messages[i].name[messages[i].name.length - 2] != ':') {
 					messages[i].name += ': ';
 				}
                 html += '<p class="chat-msg"><strong>' + (messages[i].name ? messages[i].name : '') + '</strong>';
