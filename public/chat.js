@@ -15,18 +15,21 @@ window.onload = function() {
     var origTitle = document.title;
     var onTab = true;
     var newMsg = false;
+    var numNewMsg = 0;
     $(window).focus(function(){
         document.title = origTitle;
         newMsg = false;
+        numNewMsg = 0;
         onTab = true;
     });
     
     var changeTitle = function(){
         if(newMsg == true && onTab == false){
-            document.title = '*We have a new bird';
+            document.title = numNewMsg + ' New Ravens';
         }
         if(onTab == true){
             newMsg = false;
+            numNewMsg = 0;
         }
     }
     
@@ -54,6 +57,7 @@ window.onload = function() {
     socket.on('message', function (data) {
         if(data.message) {
             newMsg = true;
+            numNewMsg++;
             messages.push(data);
             var html = '';
             for(var i=0; i<messages.length; i++) {
