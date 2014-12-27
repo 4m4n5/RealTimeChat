@@ -25,6 +25,9 @@ window.onload = function() {
         if(newMsg == true && onTab == false){
             document.title = '*We have a new bird';
         }
+        if(onTab == true){
+            newMsg = false;
+        }
     }
     
     setInterval(changeTitle, 10);
