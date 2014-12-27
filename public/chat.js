@@ -11,6 +11,26 @@ window.onload = function() {
     var name = document.getElementById("name");
     var numDisp = document.getElementById("numDisp");
     
+    //changing tab title on new message
+    var origTitle = document.title;
+    var newMsg = false;
+    $(window).focus(function(){
+        document.title = origTitle;
+        newMsg = false;
+    });
+    
+    var changeTitle = function(){
+        if(newMsg){
+            document.title = '*We have a new bird';
+        }
+    }
+    
+    $(window).blur(function(){
+        setInterval(changeTitle, 50);
+    });
+    
+    
+    //for displaying old messages
     socket.on('output', function(data){
         var oldMsg = '';
         if(data.length){
@@ -22,8 +42,11 @@ window.onload = function() {
         }
     });
    
+    
+    //for displaying new messages
     socket.on('message', function (data) {
         if(data.message) {
+            newMsg = true;
             messages.push(data);
             var html = '';
             for(var i=0; i<messages.length; i++) {
