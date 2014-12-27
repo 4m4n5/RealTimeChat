@@ -25,7 +25,12 @@ window.onload = function() {
     
     var changeTitle = function(){
         if(newMsg == true && onTab == false){
-            document.title = numNewMsg + ' New Ravens';
+            if(numNewMsg == 1){
+                document.title = numNewMsg + ' New Raven';
+            }
+            else{
+                document.title = numNewMsg + ' New Ravens';    
+            }
         }
         if(onTab == true){
             newMsg = false;
