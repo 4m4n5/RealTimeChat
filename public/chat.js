@@ -13,20 +13,24 @@ window.onload = function() {
     
     //changing tab title on new message
     var origTitle = document.title;
+    var onTab = true;
     var newMsg = false;
     $(window).focus(function(){
         document.title = origTitle;
         newMsg = false;
+        onTab = true;
     });
     
     var changeTitle = function(){
-        if(newMsg){
+        if(newMsg == true && onTab == false){
             document.title = '*We have a new bird';
         }
     }
     
+    setInterval(changeTitle, 10);
+    
     $(window).blur(function(){
-        setInterval(changeTitle, 50);
+        onTab = false;
     });
     
     
