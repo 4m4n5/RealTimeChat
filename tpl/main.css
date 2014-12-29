@@ -140,7 +140,7 @@ input.send:focus {
 
 .emoticons {
     display: block;
-    width: 360px;
+    width: 280px;
     overflow: hidden;
     border: 1px solid #ccc;
     border-top-width: 0;
@@ -169,5 +169,6 @@ input.send:focus {
 }
 
 .emo img {
-    width: 43px;
+    width: 33px;
+    margin: 0 auto;
 }
