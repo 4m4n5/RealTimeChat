@@ -140,7 +140,7 @@ input.send:focus {
 
 .emoticons {
     display: block;
-    width: 280px;
+    width: 360px;
     overflow: hidden;
     border: 1px solid #ccc;
     border-top-width: 0;
@@ -152,9 +152,11 @@ input.send:focus {
 }
 
 .emo {
-    width: 43px;
-    margin: 1px;
+    width: 33px;
+    margin: 2px;
+    padding: 3px;
     text-align: center;
+    background: #fafafa;
     float: left;
     cursor: pointer;
     -webkit-transition: all 0.20s ease-in-out;
@@ -164,8 +166,8 @@ input.send:focus {
     transition: all 0.20s ease-in-out;
 }
 
-.emo:hover {
-    background: #f1f1f1;
+.emo:hover, .emo:focus {
+    background: #EB3349;
 }
 
 .emo img {
