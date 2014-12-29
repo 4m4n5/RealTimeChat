@@ -6,7 +6,8 @@
         "socket.io": "latest",
         "express": "latest",
         "jade": "latest",
-        "mongodb": "latest"
+        "mongodb": "latest",
+        "emoji-images": "latest"
     },
     
     "author": "aman",
