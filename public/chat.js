@@ -39,11 +39,21 @@ window.onload = function() {
     }
     
     setInterval(changeTitle, 10);
+    setInterval(emoType, 10);
     
     $(window).blur(function(){
         onTab = false;
     });
     
+    //for showing emojis
+    var emojify = function(string){
+        var emojifiedString = emoji(string, '/pngs/', 30);
+    }
+    
+    //for emojifying type area
+    var emoType = function(){
+        field.value = emojify(field.value);
+    }
     
     //for displaying old messages
     socket.on('output', function(data){
