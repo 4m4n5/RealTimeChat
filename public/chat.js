@@ -49,7 +49,7 @@ window.onload = function() {
     socket.on('output', function(data){
         var oldMsg = '';
         if(data.length){
-            for(var x = data.length - 1; x >= 0; x += 1){
+            for(var x = data.length - 1; x >= 0; x -= 1){
                 oldMsg += '<p class="chat-msg"><strong>' + data[x].name + ': </strong>';
                 oldMsg += data[x].message + '</p>';
             }
