@@ -153,20 +153,19 @@ input.send:focus {
 
 .emo {
     width: 43px;
-    padding: 1px;
     margin: 1px;
     text-align: center;
     float: left;
     cursor: pointer;
-    -webkit-transition: all 0.30s ease-in-out;
-    -moz-transition: all 0.30s ease-in-out;
-    -ms-transition: all 0.30s ease-in-out;
-    -o-transition: all 0.30s ease-in-out;
-    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.20s ease-in-out;
+    -moz-transition: all 0.20s ease-in-out;
+    -ms-transition: all 0.20s ease-in-out;
+    -o-transition: all 0.20s ease-in-out;
+    transition: all 0.20s ease-in-out;
 }
 
 .emo:hover {
-    background: #fafafa;
+    background: #f1f1f1;
 }
 
 .emo img {
