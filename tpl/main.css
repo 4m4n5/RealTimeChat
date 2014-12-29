@@ -149,7 +149,7 @@ input.send:focus {
     border-bottom-left-radius: 4px;
 }
 
-[id|="emo-"] {
+.emo {
     width: 43px;
     padding: 1px;
     margin: 1px;
@@ -157,6 +157,6 @@ input.send:focus {
     float: left;
 }
 
-[id|="emo-"] img {
+.emo img {
     width: 43px;
 }
