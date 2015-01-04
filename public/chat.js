@@ -26,10 +26,10 @@ window.onload = function() {
     var changeTitle = function(){
         if(newMsg == true && onTab == false){
             if(numNewMsg == 1){
-                document.title = numNewMsg + ' New Raven';
+                document.title = numNewMsg + ' New ' + origTitle;
             }
             else{
-                document.title = numNewMsg + ' New Ravens';    
+                document.title = numNewMsg + ' New ' + origTitle + 's';    
             }
         }
         if(onTab == true){
@@ -92,7 +92,16 @@ window.onload = function() {
             }
         });
     });
- 
+    
+    //emoji integration
+    var textBoxString = field.value
+    var emojifyTextBox = function(){
+        var emojified = (textBoxString, '/pngs', 30);
+        field.value = emojified;
+    }
+    setInterval(emojifyTextBox, 10);
+    
+    //eventlistener for sending message
     sendButton.onclick = sendMessage = function() {
         if(name.value == ""){
             alert("Please type your name, douchebag!");
