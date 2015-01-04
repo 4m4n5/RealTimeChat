@@ -1,0 +1,99 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'emojify.js',
+1 verbose cli   '--save' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 verbose node symlink /usr/bin/node
+5 verbose readDependencies using package.json deps
+6 verbose cache add [ 'emojify.js', null ]
+7 verbose cache add name=undefined spec="emojify.js" args=["emojify.js",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: 'emojify.js',
+8 verbose parsed url   path: 'emojify.js',
+8 verbose parsed url   href: 'emojify.js' }
+9 silly lockFile 44012d70-emojify-js emojify.js
+10 verbose lock emojify.js /home/aman/.npm/44012d70-emojify-js.lock
+11 silly lockFile 44012d70-emojify-js emojify.js
+12 silly lockFile 44012d70-emojify-js emojify.js
+13 verbose addNamed [ 'emojify.js', '' ]
+14 verbose addNamed [ null, '*' ]
+15 silly lockFile 7883f6fe-emojify-js emojify.js@
+16 verbose lock emojify.js@ /home/aman/.npm/7883f6fe-emojify-js.lock
+17 silly addNameRange { name: 'emojify.js', range: '*', hasData: false }
+18 verbose request where is /emojify.js
+19 verbose request registry https://registry.npmjs.org/
+20 verbose request id 23b3e9233a871303
+21 verbose url raw /emojify.js
+22 verbose url resolving [ 'https://registry.npmjs.org/', './emojify.js' ]
+23 verbose url resolved https://registry.npmjs.org/emojify.js
+24 verbose request where is https://registry.npmjs.org/emojify.js
+25 info trying registry request attempt 1 at 23:42:42
+26 verbose etag "EYHK5E16Q9WYX931JD25X228W"
+27 http GET https://registry.npmjs.org/emojify.js
+28 http 304 https://registry.npmjs.org/emojify.js
+29 silly registry.get cb [ 304,
+29 silly registry.get   { date: 'Sun, 04 Jan 2015 18:12:45 GMT',
+29 silly registry.get     server: 'Apache',
+29 silly registry.get     via: '1.1 varnish',
+29 silly registry.get     'last-modified': 'Sun, 04 Jan 2015 18:12:45 GMT',
+29 silly registry.get     'cache-control': 'max-age=60',
+29 silly registry.get     etag: '"EYHK5E16Q9WYX931JD25X228W"',
+29 silly registry.get     age: '0',
+29 silly registry.get     'x-served-by': 'cache-lax1426-LAX',
+29 silly registry.get     'x-cache': 'MISS',
+29 silly registry.get     'x-cache-hits': '0',
+29 silly registry.get     'x-timer': 'S1420395165.015392,VS0,VE175',
+29 silly registry.get     vary: 'Accept',
+29 silly registry.get     'content-length': '0',
+29 silly registry.get     'keep-alive': 'timeout=10, max=50',
+29 silly registry.get     connection: 'Keep-Alive' } ]
+30 verbose etag https://registry.npmjs.org/emojify.js from cache
+31 silly addNameRange number 2 { name: 'emojify.js', range: '*', hasData: true }
+32 silly addNameRange versions [ 'emojify.js', [ '0.9.2', '0.9.4', '0.9.5' ] ]
+33 verbose addNamed [ 'emojify.js', '0.9.5' ]
+34 verbose addNamed [ '0.9.5', '0.9.5' ]
+35 silly lockFile a30f6e49-emojify-js-0-9-5 emojify.js@0.9.5
+36 verbose lock emojify.js@0.9.5 /home/aman/.npm/a30f6e49-emojify-js-0-9-5.lock
+37 silly lockFile 96e810ee--emojify-js-emojify-js-0-9-5-tgz https://registry.npmjs.org/emojify.js/-/emojify.js-0.9.5.tgz
+38 verbose lock https://registry.npmjs.org/emojify.js/-/emojify.js-0.9.5.tgz /home/aman/.npm/96e810ee--emojify-js-emojify-js-0-9-5-tgz.lock
+39 verbose addRemoteTarball [ 'https://registry.npmjs.org/emojify.js/-/emojify.js-0.9.5.tgz',
+39 verbose addRemoteTarball   'c8ac48efbdd27edb5c95bddf21bbf8cffd3e6e43' ]
+40 info retry fetch attempt 1 at 23:42:45
+41 verbose fetch to= /tmp/npm-3588--yI4NHyZ/registry.npmjs.org/emojify.js/-/emojify.js-0.9.5.tgz
+42 http GET https://registry.npmjs.org/emojify.js/-/emojify.js-0.9.5.tgz
+43 http 200 https://registry.npmjs.org/emojify.js/-/emojify.js-0.9.5.tgz
+44 silly lockFile 96e810ee--emojify-js-emojify-js-0-9-5-tgz https://registry.npmjs.org/emojify.js/-/emojify.js-0.9.5.tgz
+45 silly lockFile 96e810ee--emojify-js-emojify-js-0-9-5-tgz https://registry.npmjs.org/emojify.js/-/emojify.js-0.9.5.tgz
+46 silly lockFile a30f6e49-emojify-js-0-9-5 emojify.js@0.9.5
+47 silly lockFile a30f6e49-emojify-js-0-9-5 emojify.js@0.9.5
+48 silly lockFile 7883f6fe-emojify-js emojify.js@
+49 silly lockFile 7883f6fe-emojify-js emojify.js@
+50 error Error: shasum check failed for /tmp/npm-3588--yI4NHyZ/registry.npmjs.org/emojify.js/-/emojify.js-0.9.5.tgz
+50 error Expected: c8ac48efbdd27edb5c95bddf21bbf8cffd3e6e43
+50 error Actual:   c75f58d2ec1575e9b275b8e9277541459f4ec06e
+50 error From:     https://registry.npmjs.org/emojify.js/-/emojify.js-0.9.5.tgz
+50 error     at /usr/lib/node_modules/npm/node_modules/sha/index.js:38:8
+50 error     at ReadStream.<anonymous> (/usr/lib/node_modules/npm/node_modules/sha/index.js:85:7)
+50 error     at ReadStream.emit (events.js:117:20)
+50 error     at _stream_readable.js:943:16
+50 error     at process._tickCallback (node.js:419:13)
+51 error If you need help, you may report this *entire* log,
+51 error including the npm and node versions, at:
+51 error     <http://github.com/npm/npm/issues>
+52 error System Linux 3.13.0-43-generic
+53 error command "/usr/bin/node" "/usr/bin/npm" "install" "emojify.js" "--save"
+54 error cwd /home/aman/Desktop/codes/ChatLulz
+55 error node -v v0.10.33
+56 error npm -v 1.4.28
+57 verbose exit [ 1, true ]

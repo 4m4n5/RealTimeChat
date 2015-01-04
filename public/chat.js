@@ -94,13 +94,8 @@ window.onload = function() {
     });
     
     //emoji integration
-    var textBoxString = field.value
-    var emojifyTextBox = function(){
-        field.value = ":smile:"
-        var emojified = (textBoxString, '/pngs', 30);
-        field.value = emojified;
-    }
-    setInterval(emojifyTextBox, 10);
+    emojify.setConfig({img_dir:'/pngs'});
+    emojify.run();
     
     //eventlistener for sending message
     sendButton.onclick = sendMessage = function() {
