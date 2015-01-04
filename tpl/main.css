@@ -9,6 +9,13 @@
     outline: none;
 }
 
+.emoji {
+    width: 1.5em;
+    height: 1.5em;
+    display: inline-block;
+    margin-bottom: -0.25em;
+}
+
 .title {
     width: 80%;
     overflow: hidden;
