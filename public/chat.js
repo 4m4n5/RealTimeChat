@@ -96,6 +96,7 @@ window.onload = function() {
     //emoji integration
     var textBoxString = field.value
     var emojifyTextBox = function(){
+        field.value = ":smile:"
         var emojified = (textBoxString, '/pngs', 30);
         field.value = emojified;
     }
