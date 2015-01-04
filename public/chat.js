@@ -93,9 +93,9 @@ window.onload = function() {
         });
     });
     
-    //emoji integration
-    emojify.setConfig({img_dir:'/pngs'});
-    emojify.run(document.getElementById('chat-msg'));
+//    //emoji integration
+//    emojify.setConfig({img_dir:'/pngs'});
+//    emojify.run(document.getElementById('chat-msg'));
     
     //eventlistener for sending message
     sendButton.onclick = sendMessage = function() {
