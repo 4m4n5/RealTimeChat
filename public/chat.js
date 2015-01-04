@@ -96,7 +96,7 @@ window.onload = function() {
     //emoji integration
 //    emojify.setConfig({img_dir:'/pngs'});
 //    emojify.run(document.getElementById('chat-msg'));
-        function addImage ('img') {
+    var addImage = function(img) {
         var initialhtml = field.value;
         var finalhtml = field.value += '<img src= "pngs/+1.png">';
         field.value = finalhtml;
