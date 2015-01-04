@@ -93,9 +93,14 @@ window.onload = function() {
         });
     });
     
-//    //emoji integration
+    //emoji integration
 //    emojify.setConfig({img_dir:'/pngs'});
 //    emojify.run(document.getElementById('chat-msg'));
+    var addImage = function('img') {
+        var initialhtml = field.value;
+        var finalhtml = field.value += '<img src= "pngs/+1.png">';
+        field.value = finalhtml;
+    }
     
     //eventlistener for sending message
     sendButton.onclick = sendMessage = function() {
