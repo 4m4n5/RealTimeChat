@@ -50,7 +50,7 @@ window.onload = function() {
         var oldMsg = '';
         if(data.length){
             for(var x = data.length - 1; x >= 0; x -= 1){
-                oldMsg += '<p class="chat-msg"><strong>' + data[x].name + ': </strong>';
+                oldMsg += '<p class="chat-msg", id="chat-msg"><strong>' + data[x].name + ': </strong>';
                 oldMsg += data[x].message + '</p>';
             }
             prevMsgs.innerHTML = oldMsg;
@@ -69,7 +69,7 @@ window.onload = function() {
                 if (i !== 0 && messages[i].name[messages[i].name.length - 2] != ':') {
 					messages[i].name += ': ';
 				}
-                html += '<p class="chat-msg"><strong>' + (messages[i].name ? messages[i].name : '') + '</strong>';
+                html += '<p class="chat-msg", id="chat-msg"><strong>' + (messages[i].name ? messages[i].name : '') + '</strong>';
                 html += messages[i].message + '</p>';
             }
             newMsgs.innerHTML = html;
@@ -95,7 +95,7 @@ window.onload = function() {
     
     //emoji integration
     emojify.setConfig({img_dir:'/pngs'});
-    emojify.run();
+    emojify.run(document.getElementById('chat-msg'));
     
     //eventlistener for sending message
     sendButton.onclick = sendMessage = function() {
