@@ -49,7 +49,7 @@ mongo.connect('mongodb://aman:thermo999@ds063870.mongolab.com:63870/chat', funct
         socket.emit('userNum',{ userNum: numUsers });
         socket.broadcast.emit('userNum',{ userNum: numUsers });
         
-        //showing 'previous messagses' message
+        //showing 'previous messages' message
         socket.emit('message', { message: '</p><div class="prev-msgs-welcome-msg">Previous Messages</div><p>' });
         
         //on sending message
