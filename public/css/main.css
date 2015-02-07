@@ -20,7 +20,7 @@ body {
     background: #fafafa;
 }
 
-.title {
+.credits {
     position: fixed;
     bottom: 0;
     right: 0;
@@ -80,7 +80,8 @@ input#name:focus {
     box-shadow: 0px 0px 7px 1px rgba(81, 203, 238, 1);
 }
 
-#topicBox {
+#title {
+    font-family: 'Love Ya Like A Sister';
     padding: 20px;
     background: -webkit-linear-gradient(90deg, #1D976C 10%, #93F9B9 90%); /* Chrome 10+, Saf5.1+ */
     background: -moz-linear-gradient(90deg, #1D976C 10%, #93F9B9 90%); /* FF3.6+ */
@@ -88,9 +89,10 @@ input#name:focus {
     background: -o-linear-gradient(90deg, #1D976C 10%, #93F9B9 90%); /* Opera 11.10+ */
     background: linear-gradient(90deg, #1D976C 10%, #93F9B9 90%); /* W3C */
     color: #fff;
-    font-size: 24px;
+    font-size: 30px;
     text-shadow: 0 1px 7px #444;
     text-align: center;
+    text-transform: uppercase;
 }
 
 .info-bar-back {
@@ -110,6 +112,16 @@ input#name:focus {
     text-transform: capitalize;
     padding: 10px 35px;
     color: #999;
+    border-right: 1px solid #ddd;
+}
+
+#topicBox {
+    display: inline-block;
+    line-height: 40px;
+    font-size: 16px;
+    text-transform: capitalize;
+    padding: 10px 35px;
+    color: #999;
 }
 
 a:link, a:visited, a:hover, a:focus, a:active {
@@ -121,18 +133,72 @@ a:link, a:visited, a:hover, a:focus, a:active {
 
 a#rejectButton {
     display: inline-block;
-    padding: 20px 40px;
+    padding: 20px;
     color: #fff;
     background: #d9534f;
 }
 
-a#rejectButton i.fa-close {
+a#rejectButton i.fa {
     color: #fff;
-    margin-left: 12px;
 }
 
 a#rejectButton:hover, a#rejectButton:focus {
     background: #c9302c;
+}
+
+#topic-field {
+    position: absolute;
+    top: 12px;
+    right: 75px;
+    width: 160px;
+    overflow: hidden;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-right-width: 0;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    padding: 7px 14px;
+    font-weight: 300;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out;
+}
+
+#topic-field:focus {
+    border-color: rgba(81, 203, 238, 1) !important;
+}
+
+#send-topic {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    overflow: hidden;
+    padding: 7px 20px;
+    border: 1px solid rgba(81, 203, 238, 1);
+    border-left-width: 0;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    margin: 0;
+    background: rgba(81, 203, 238, 1);
+    color: #fff;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-weight: 300;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out;
+}
+
+#send-topic i.fa {
+    color: #fff;
+}
+
+#send-topic:focus {
+    background: #333;   
 }
 
 .numDisp-icon {
@@ -143,7 +209,7 @@ a#rejectButton:hover, a#rejectButton:focus {
 	margin-right: 7px;
 }
 
-.numDisp-icon i.fa.fa-user {
+.numDisp-icon i.fa {
     color: #999;
 }
 
@@ -155,7 +221,7 @@ a#rejectButton:hover, a#rejectButton:focus {
 }
 
 #content {
-    width: 600px;
+    width: 615px;
     height: 300px;
     border-bottom: 1px solid #ccc;
     padding: 10px 20px;
@@ -192,14 +258,6 @@ a#rejectButton:hover, a#rejectButton:focus {
     margin-left: 10px;
     border-radius: 3px;
     border: 1px solid #eee;
-}
-
-.user-msg img {
-    width: 48px;
-}
-
-p.chat-msg {
-    margin: 4px 0;
 }
 
 .prev-msgs-welcome-msg {

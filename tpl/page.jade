@@ -9,32 +9,28 @@ html
         link(href = "/css/font-awesome.min.css", rel = "stylesheet")
         link(href = '//fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Open+Sans:700,300,600,400', rel='stylesheet', type = 'text/css')
     body
-        .title Raven
+        .credits Shinigamis
         #light-box
             h1 Raven
             input#name(type = "text", placeholder = 'Enter Your Alias', tabindex = "1", autofocus)
-        #topicBox
+        #title Raven
         .info-bar-back
             .info-bar
                 #display-name
-                a#rejectButton(href="#") Reject Topic
-                    i.fa.fa-close.fa-lg
+                #topicBox
+                a#rejectButton(href="#")
+                    i.fa.fa-forward.fa-lg
                 .numDisp-icon
                     i.fa.fa-user
                 #numDisp
+                input(type="text", id="topic-field", placeholder="Suggest a new topic")
+                button(id="send-topic")
+                    i.fa.fa-plus.fa-lg
         #content
-            .message
-                .user-name Captain america
-                .user-msg Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-            .message
-                .user-name Sahil Lamba
-                .user-msg Lorem Ipsum
             #prevMsgs
             #newMsgs
         #topics-list
         .controls
-            input.field(type="text", id="topic-field", placeholder="Suggest A New Topic")
-            input.send(type="button", value="Send", id="send-topic")
             input.field(type="text", id="field", placeholder="What's on your mind?", tabindex="2")
             input.send(type="button", value="Send", id="send", tabindex="3")
             .emoticons
