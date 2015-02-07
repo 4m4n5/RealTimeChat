@@ -96,6 +96,7 @@ window.onload = function() {
         });
     });
     
+    
 //    emoji integration
 //    emojify.setConfig({img_dir:'/pngs'});
 //    emojify.run(document.getElementById('chat-msg'));
@@ -242,8 +243,38 @@ window.onload = function() {
     socket.on('changeTopic', function(data){
         document.getElementById('topicBox').innerHTML = data.value;
         flag = 1;
+        document.getElementById('topics-list').innerHTML = '';
+        socket.emit('topicList', {value: 1});
+        setTimeout(function(){
+            socket.emit('topic', {value: 42 });
+        },data.time);
+    });
+    
+//  taking in new topic
+    var topicField = document.getElementById('topic-field'); 
+    var sendTopic = document.getElementById('send-topic');
+    sendTopic.onclick = addTopic = function(){
+        if(topicField.value){
+            socket.emit('appendTopic', {value: topicField.value});
+            topicField.value = '';
+        }
+    };
+    
+// appending new topic list element
+    socket.on('topicListElement', function(data){
+        var node = document.createElement('p');
+        node.innerHTML = data.value;
+        document.getElementById('topics-list').appendChild(node);
     });
 
+//  listening for keypress
+    $(document).ready(function() {
+        $("#topic-field").keyup(function(e) {
+            if(e.keyCode == 13) {
+                addTopic();
+            }
+        });
+    });
     
     document.getElementById('light-box').addEventListener('keypress', function(e) {
         if(e.keyCode === 13 && name.value) {

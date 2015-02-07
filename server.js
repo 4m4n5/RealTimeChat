@@ -28,7 +28,8 @@ var numUsers = 0;
 
 //rejects functioning
 var numRejects = 0;
-var topics = ["Game of Thrones", "Star Wars", "Star Trek", "Intersteller"];
+var topics = ["Game of Thrones", "Star Wars", "Star Trek", "Interstellar"];
+var topicPriority = [1, 1, 1, 1];
 var topicNum = 0;
 
  
@@ -67,16 +68,45 @@ mongo.connect('mongodb://aman:thermo999@ds063870.mongolab.com:63870/chat', funct
         //refreshing topic on connection
         socket.emit('changeTopic', {value: topics[topicNum]});
         
-        //on topic change
+        //timer
+        
+        var time = (5 + 5*numUsers)*1000*60;
+        if(time > 2*3600*1000){
+            time = 2*3600*1000;
+        }
+        
+        //on topic change for changing current topic based on rejects
         socket.on('topic', function(data){
             numRejects++;
-            if (numRejects >= numUsers/3){
+            if (numRejects >= numUsers/3 || data.value == 42){
                 topicNum++;
+                if (topicNum === topics.length){
+                    topicNum = 0;
+                }
                 numRejects = 0;
-                socket.emit('changeTopic', {value: topics[topicNum]});
-                socket.broadcast.emit('changeTopic', {value: topics[topicNum]});
+                socket.emit('changeTopic', {value: topics[topicNum], time: time});
+                socket.broadcast.emit('changeTopic', {value: topics[topicNum], time: time});
             }
         });
+        
+        //on append topic call
+        socket.on('appendTopic', function(data){
+            topics.push(data.value);
+            topicPriority.push(1);
+        });
+        
+        //on topicList call for displaying list of topics
+        socket.on('topicList', function(data){
+            for(var i = topicNum + 1; i < topics.length; i++ ){
+                socket.emit('topicListElement', {value: topics[i]});
+                socket.broadcast.emit('topicListElement', {value: topics[i]});
+            }
+            for(var j = 0; j <= topicNum; j++ ){
+                socket.emit('topicListElement', {value: topics[j]});
+                socket.broadcast.emit('topicListElement', {value: topics[i]});
+            }
+        });
+        
 
         //on disconnection
         socket.on('disconnect', function(){

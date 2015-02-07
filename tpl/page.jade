@@ -24,7 +24,10 @@ html
         #content
             #prevMsgs
             #newMsgs
+        #topics-list
         .controls
+            input.field(type="text", id="topic-field", placeholder="Suggest A New Topic")
+            input.send(type="button", value="Send", id="send-topic")
             input.field(type="text", id="field", placeholder="What's on your mind?", tabindex="2")
             input.send(type="button", value="Send", id="send", tabindex="3")
             .emoticons
