@@ -1,21 +1,22 @@
 doctype
 html
     head
-        style
-            include main.css
         title= "Raven"
-        script(src = '/emojify.min.js', type = 'text/javascript')
-        script(src = '/emojify.js', type = 'text/javascript')
         script(src = '/jquery-1.11.1.min.js', type = 'text/javascript')
         script(src = '/chat.js', type = 'text/javascript')
         script(src = '/socket.io/socket.io.js', type = 'text/javascript')
-        link(href = '//fonts.googleapis.com/css?family=Lato:300,400,700', rel='stylesheet', type = 'text/css')
-        link(href = "//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css", rel = "stylesheet")
+        script(src = '/skrollr.min.js', type = 'text/javascript')
+        script(src = '/nanoscroller.min.js', type = 'text/javascript')
+        link(href = "/css/main.css", rel = "stylesheet")
+        link(href = "/css/font-awesome.min.css", rel = "stylesheet")
+        link(href = "/css/nanoscroller.css", rel = "stylesheet")
+        link(href = '//fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Open+Sans:700,300,600,400', rel='stylesheet', type = 'text/css')
     body
         .title Raven
+        #light-box
+            h1 Raven
+            input#name(type = "text", placeholder = 'Enter Your Alias', tabindex = "1", autofocus)
         .info-wrapper
-            #lightBox
-                input#name(type = "text", placeholder = 'And you are? (Name)', tabindex = "1", autofocus)
             #topicBox
                 p Game of Thrones
             a#rejectButton(href="#") Reject

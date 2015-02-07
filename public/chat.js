@@ -247,9 +247,9 @@ window.onload = function() {
         }
     };
     
-    document.getElementById('lightBox').addEventListener('keypress', function(e) {
+    document.getElementById('light-box').addEventListener('keypress', function(e) {
         if(e.keyCode === 13 && name.value) {
-            $('#lightBox').fadeOut(300);
+            $('#light-box').fadeOut(300);
             $('#field').focus();
         }
     });

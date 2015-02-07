@@ -1,0 +1,225 @@
+*{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    letter-spacing: normal;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+}
+
+.emoji {
+    width: 1.5em;
+    height: 1.5em;
+    display: inline-block;
+    margin-bottom: -0.25em;
+}
+
+body {
+    background: #fafafa;
+}
+
+.title {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    font-family: 'Love Ya Like A Sister';
+    font-size: 24px;
+    text-align: center;
+    padding: 30px;
+    color: rgba(81, 203, 238, 1);
+    text-transform: uppercase;
+    /*text-shadow: 0 1px 7px #444;*/
+}
+
+#light-box {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    z-index: 1000;
+}
+
+#light-box h1 {
+    margin-top: 50px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: lighter;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Love Ya Like A Sister';
+}
+
+.info-wrapper {
+    margin: 20px auto;
+    text-align: center;
+}
+
+input#name{
+    width: 300px;
+    overflow: hidden;
+    padding: 14px 22px;
+    border: 1px solid #fff;
+    border-radius: 29px;
+    margin: 60px auto;
+    font-size: 20px;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+	transition: all 0.30s ease-in-out;
+	font-weight: 300;
+    background: #eee;
+}
+
+input#name:focus {
+    background: #fff;
+    box-shadow: 0 0 7px 1px rgba(81, 203, 238, 1);
+    -webkit-box-shadow: 0px 0px 7px 1px rgba(81, 203, 238, 1);
+    -moz-box-shadow: 0px 0px 7px 1px rgba(81, 203, 238, 1);
+    -o-box-shadow: 0px 0px 7px 1px rgba(81, 203, 238, 1);
+    box-shadow: 0px 0px 7px 1px rgba(81, 203, 238, 1);
+}
+
+.numDisp-icon {
+	display: inline-block;
+	color: rgba(81, 203, 238, 1);
+	font-size: 28px;
+	margin: 0;
+	margin-right: 7px;
+}
+
+.numDisp-icon i.fa.fa-user {
+    color: rgba(81, 203, 238, 1);
+}
+
+#numDisp {
+	display: inline-block;
+	color: rgba(81, 203, 238, 1);
+	font-size: 28px;
+	margin: 0;
+}
+
+#content {
+    width: 498px;
+    height: 298px;
+    border: 1px solid #ccc;
+    padding: 10px 14px;
+    margin: 0 auto 20px auto;
+    overflow-y: scroll;
+    word-break: normal;
+    border-radius: 5px;
+}
+
+p.chat-msg {
+    margin: 4px 0;
+}
+
+.prev-msgs-welcome-msg {
+    width: 98%;
+    color: rgba(81,203,238,1);
+    background: #fafafa;
+    text-align: center;
+    display: block;
+    padding: 1%;
+}
+
+.controls {
+    margin: 0 auto 20px auto;
+    text-align: center;
+}
+
+input.field {
+    width: 299px;
+    overflow: hidden;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-right-width: 0;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    padding: 7px 14px;
+    font-weight: 300;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+	transition: all 0.30s ease-in-out;
+}
+
+input.field:focus {
+    border-color: #EB3349 !important;
+}
+
+input.send {
+    overflow: hidden;
+    padding: 7px 20px;
+    border: 1px solid #EB3349;
+    border-left-width: 0;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    margin: 0;
+    background: #EB3349;
+    color: #fff;
+    text-transform: capitalize;
+    cursor: pointer;
+	font-weight: 300;
+	-webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+	transition: all 0.30s ease-in-out;
+}
+
+input.send:focus {
+	background: #333;	
+}
+
+.emoticons {
+    display: block;
+    width: 360px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-top-width: 0;
+    padding: 2px;
+    background: #fff;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    margin: 0 auto;
+}
+
+.emo {
+    width: 33px;
+    margin: 2px;
+    padding: 4px;
+    text-align: center;
+    background: #fafafa;
+    float: left;
+    cursor: pointer;
+    -webkit-transition: all 0.20s ease-in-out;
+    -moz-transition: all 0.20s ease-in-out;
+    -ms-transition: all 0.20s ease-in-out;
+    -o-transition: all 0.20s ease-in-out;
+    transition: all 0.20s ease-in-out;
+}
+
+.emo:hover, .emo:focus {
+    background: #EB3349;
+}
+
+.emo img {
+    width: 33px;
+    margin: 0 auto;
+}
+
+#topicBox {
+    border: 1px solid black; 
+}
+
+#topicBox p {
+    border: 1px solid grey;
+}

@@ -3,8 +3,6 @@
   "version": "0.0.1",
   "description": "Real time web chat using nodeJS, socket.io",
   "dependencies": {
-    "emoji-images": "latest",
-    "emojify.js": "^0.9.5",
     "express": "latest",
     "jade": "latest",
     "mongodb": "latest",
