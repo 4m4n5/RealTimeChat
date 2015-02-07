@@ -99,10 +99,12 @@ window.onload = function() {
 //    emojify.setConfig({img_dir:'/pngs'});
 //    emojify.run(document.getElementById('chat-msg'));
     
-    document.getElementById('emo-smile').onclick = addImage = function() {
-        var initialhtml = field.value;
-        var finalhtml = field.value += '<img src= "pngs/+1.png">';
-        field.value = finalhtml;
+    var smile = document.getElementById('emo-smile');
+    
+    smile.onclick = addImage = function() {
+        var html = '<img src= "pngs/smile.png">';
+        socket.emit('send', {message: html, name: name.value});
+        $('#field').focus();
     }
     
     //eventlistener for sending message
