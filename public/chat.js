@@ -11,6 +11,8 @@ window.onload = function() {
     var name = document.getElementById("name");
     var numDisp = document.getElementById("numDisp");
     
+    name.value = '';
+    
     //changing tab title on new message
     var origTitle = document.title;
     var onTab = true;
@@ -114,5 +116,12 @@ window.onload = function() {
             field.value = "";
         }
     };
+    
+    document.getElementById('lightBox').addEventListener('keypress', function(e) {
+        if(e.keyCode === 13 && name.value) {
+            $('#lightBox').fadeOut(300);
+            $('#field').focus();
+        }
+    });
  
 }

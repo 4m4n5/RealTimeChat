@@ -48,8 +48,21 @@ input#name{
 	font-weight: 300;
 }
 
+#lightBox {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+input#name {
+    margin: 110px auto;
+}
+
 input#name:focus {
-     border-color: rgba(81, 203, 238, 1) !important;
+    border-color: rgba(81, 203, 238, 1) !important;
 }
 
 .numDisp-icon {
