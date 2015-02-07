@@ -52,8 +52,10 @@ window.onload = function() {
         var oldMsg = '';
         if(data.length){
             for(var x = data.length - 1; x >= 0; x -= 1){
-                oldMsg += '<p class="chat-msg", id="chat-msg"><strong>' + data[x].name + ': </strong>';
-                oldMsg += data[x].message + '</p>';
+                oldMsg += '<div class="message">' + 
+                            '<div class="user-name">' + data[x].name + '</div>' +
+                            '<div class="user-msg">' + data[x].message + '</div>' + 
+                        '</div>';
             }
             prevMsgs.innerHTML = oldMsg;
         }
@@ -68,11 +70,13 @@ window.onload = function() {
             messages.push(data);
             var html = '';
             for(var i=0; i<messages.length; i++) {
-                if (i !== 0 && messages[i].name[messages[i].name.length - 2] != ':') {
-					messages[i].name += ': ';
-				}
-                html += '<p class="chat-msg", id="chat-msg"><strong>' + (messages[i].name ? messages[i].name : '') + '</strong>';
-                html += messages[i].message + '</p>';
+    //             if (i !== 0 && messages[i].name[messages[i].name.length - 2] != ':') {
+				// 	messages[i].name += ': ';
+				// }
+                html += '<div class="message">' + 
+                            '<div class="user-name">' + (messages[i].name ? messages[i].name : '') + '</div>' +
+                            '<div class="user-msg">' + messages[i].message + '</div>' + 
+                        '</div>';
             }
             newMsgs.innerHTML = html;
             content.scrollTop = content.scrollHeight;
