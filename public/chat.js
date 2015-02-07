@@ -109,6 +109,12 @@ window.onload = function() {
     var wink = document.getElementById('emo-wink');
     var confused = document.getElementById('emo-confused');
     var sunglasses = document.getElementById('emo-sunglasses');
+    var kissing_heart = document.getElementById('emo-kissing_heart');
+    var stuck_out_tongue = document.getElementById('emo-stuck_out_tongue');
+    var worried = document.getElementById('emo-worried');
+    var sleeping = document.getElementById('emo-sleeping');
+    var expressionless = document.getElementById('emo-expressionless');
+    var unamused = document.getElementById('emo-unamused');
     
     smile.onclick = addImage = function() {
         var html = '<img src= "pngs/smile.png">';
@@ -170,10 +176,47 @@ window.onload = function() {
         $('#field').focus();
     }
     
+    
+    kissing_heart.onclick = addImage = function() {
+        var html = '<img src= "pngs/kissing_heart.png">';
+        socket.emit('send', {message: html, name: name.value});
+        $('#field').focus();
+    }
+    
+    stuck_out_tongue.onclick = addImage = function() {
+        var html = '<img src= "pngs/stuck_out_tongue.png">';
+        socket.emit('send', {message: html, name: name.value});
+        $('#field').focus();
+    }
+    
+    worried.onclick = addImage = function() {
+        var html = '<img src= "pngs/worried.png">';
+        socket.emit('send', {message: html, name: name.value});
+        $('#field').focus();
+    }
+    
+    sleeping.onclick = addImage = function() {
+        var html = '<img src= "pngs/sleeping.png">';
+        socket.emit('send', {message: html, name: name.value});
+        $('#field').focus();
+    }
+    
+    expressionless.onclick = addImage = function() {
+        var html = '<img src= "pngs/expressionless.png">';
+        socket.emit('send', {message: html, name: name.value});
+        $('#field').focus();
+    }
+    
+    unamused.onclick = addImage = function() {
+        var html = '<img src= "pngs/unamused.png">';
+        socket.emit('send', {message: html, name: name.value});
+        $('#field').focus();
+    }
+    
+    
     //eventlistener for sending message
     sendButton.onclick = sendMessage = function() {
-        if(name.value == ""){
-            alert("Please type your name, douchebag!");
+        if(name.value == "" || !field.value){
         }
         else {
             var text = field.value;
