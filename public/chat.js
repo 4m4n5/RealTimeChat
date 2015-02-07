@@ -226,26 +226,24 @@ window.onload = function() {
         }
     };
 
-//  adding topicBox topic
-    var topics = ["Game of Thrones", "Star Wars", "Star Trek", "Intersteller"];
-    var topicNum = 0;
-    var topicBox = document.getElementById('topicBox');
-    function changeTopic(){
-        topicBox.innerHTML = topics[topicNum];
-        numRejects = 0; 
-    }    
-
 //  reject feature
-    var numRejects = 0;
+    var flag = 1;
     var reject = document.getElementById("rejectButton");
     reject.onclick = rejectFunction = function(e){
-        e.preventDefault();
-        numRejects++;
-        if(numUsers >= 3 && numRejects >= numUsers/3){
-            topicNum++;
-            changeTopic();
+        if(flag){
+            flag = 0;
+            e.preventDefault();
+            socket.emit('topic', {value: 1 });
         }
     };
+
+    
+//  changing topicBox topic
+    socket.on('changeTopic', function(data){
+        document.getElementById('topicBox').innerHTML = data.value;
+        flag = 1;
+    });
+
     
     document.getElementById('light-box').addEventListener('keypress', function(e) {
         if(e.keyCode === 13 && name.value) {

@@ -26,6 +26,13 @@ app.use(express.static(__dirname + '/public'));
 var names = {};
 var numUsers = 0;
 
+//rejects functioning
+var numRejects = 0;
+var topics = ["Game of Thrones", "Star Wars", "Star Trek", "Intersteller"];
+var topicNum = 0;
+
+ 
+
 mongo.connect('mongodb://aman:thermo999@ds063870.mongolab.com:63870/chat', function(err, db){
     if (err) throw err;
     
@@ -42,8 +49,6 @@ mongo.connect('mongodb://aman:thermo999@ds063870.mongolab.com:63870/chat', funct
             socket.emit('output', res);
         });
         
-        
-        
         //showing no of users on connection
         numUsers += 1;
         socket.emit('userNum',{ userNum: numUsers });
@@ -57,6 +62,20 @@ mongo.connect('mongodb://aman:thermo999@ds063870.mongolab.com:63870/chat', funct
             col.insert({ name: data.name, message: data.message }, function(){
                 io.sockets.emit('message', data);
             });
+        });
+        
+        //refreshing topic on connection
+        socket.emit('changeTopic', {value: topics[topicNum]});
+        
+        //on topic change
+        socket.on('topic', function(data){
+            numRejects++;
+            if (numRejects >= numUsers/3){
+                topicNum++;
+                numRejects = 0;
+                socket.emit('changeTopic', {value: topics[topicNum]});
+                socket.broadcast.emit('changeTopic', {value: topics[topicNum]});
+            }
         });
 
         //on disconnection
