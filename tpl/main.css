@@ -194,3 +194,11 @@ input.send:focus {
     width: 33px;
     margin: 0 auto;
 }
+
+#topicBox {
+    border: 1px solid black; 
+}
+
+#topicBox p {
+    border: 1px solid grey;
+}

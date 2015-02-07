@@ -214,7 +214,7 @@ window.onload = function() {
     }
     
     
-    //eventlistener for sending message
+//  eventlistener for sending message
     sendButton.onclick = sendMessage = function() {
         if(name.value == "" || !field.value){
         }
@@ -224,6 +224,13 @@ window.onload = function() {
             field.value = "";
         }
     };
+
+//  adding topicBox topic
+    var topics = ["Game of Thrones"];
+    var topicNum = 0;
+    var topicBox = document.getElementById('topicBox');
+    topicBox.innerHTML = topics[topicNum];
+//
     
     document.getElementById('lightBox').addEventListener('keypress', function(e) {
         if(e.keyCode === 13 && name.value) {
