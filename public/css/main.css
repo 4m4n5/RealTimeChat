@@ -126,6 +126,11 @@ a#rejectButton {
     background: #d9534f;
 }
 
+a#rejectButton i.fa-close {
+    color: #fff;
+    margin-left: 12px;
+}
+
 a#rejectButton:hover, a#rejectButton:focus {
     background: #c9302c;
 }
@@ -156,7 +161,41 @@ a#rejectButton:hover, a#rejectButton:focus {
     padding: 10px 20px;
     margin: 20px auto;
     overflow-y: scroll;
-    word-break: normal;
+}
+
+.message {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.user-name {
+    position: relative;
+    float: left;
+    width: 80px;
+    overflow: hidden;
+    padding: 7px 12px;
+    border-radius: 17px;
+    font-size: 14px;
+    color: #333;
+    background: #f0f9a0;
+    text-align: center;
+}
+
+.user-msg {
+    max-width: 460px;
+    float: left;
+    overflow: hidden;
+    background: #fff;
+    padding: 7px 12px;
+    margin-left: 10px;
+    border-radius: 3px;
+    border: 1px solid #eee;
+}
+
+.user-msg img {
+    width: 48px;
 }
 
 p.chat-msg {
