@@ -80,9 +80,10 @@ window.onload = function() {
             console.log("We have a situation: ", data);
         }
     });
-    
+    var numUsers = 0;
     socket.on('userNum', function (data) {
         numDisp.innerHTML = data.userNum;
+        numUsers = data.userNum;
     });
     
     
@@ -226,11 +227,25 @@ window.onload = function() {
     };
 
 //  adding topicBox topic
-    var topics = ["Game of Thrones"];
+    var topics = ["Game of Thrones", "Star Wars", "Star Trek", "Intersteller"];
     var topicNum = 0;
     var topicBox = document.getElementById('topicBox');
-    topicBox.innerHTML = topics[topicNum];
-//
+    function changeTopic(){
+        topicBox.innerHTML = topics[topicNum];
+        numRejects = 0; 
+    }    
+
+//  reject feature
+    var numRejects = 0;
+    var reject = document.getElementById("rejectButton");
+    reject.onclick = rejectFunction = function(e){
+        e.preventDefault();
+        numRejects++;
+        if(numUsers >= 3 && numRejects >= numUsers/3){
+            topicNum++;
+            changeTopic();
+        }
+    };
     
     document.getElementById('lightBox').addEventListener('keypress', function(e) {
         if(e.keyCode === 13 && name.value) {
