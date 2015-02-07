@@ -1,5 +1,5 @@
 window.onload = function() {
- 
+
     var messages = [];
     var serverBaseUrl = document.domain;
     var socket = io.connect(serverBaseUrl);
@@ -253,5 +253,4 @@ window.onload = function() {
             document.getElementById('display-name').innerHTML = name.value;
         }
     });
- 
 }

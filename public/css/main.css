@@ -87,46 +87,76 @@ input#name:focus {
     background: -ms-linear-gradient(90deg, #1D976C 10%, #93F9B9 90%); /* IE10 */
     background: -o-linear-gradient(90deg, #1D976C 10%, #93F9B9 90%); /* Opera 11.10+ */
     background: linear-gradient(90deg, #1D976C 10%, #93F9B9 90%); /* W3C */
-}
-
-#topicBox p {
     color: #fff;
     font-size: 24px;
     text-shadow: 0 1px 7px #444;
+    text-align: center;
+}
+
+.info-bar-back {
+    background: #fff;
+    text-align: center;
+}
+
+.info-bar {
+    position: relative;
+    overflow: hidden;
 }
 
 #display-name {
-    float: left;
+    display: inline-block;
+    line-height: 40px;
+    font-size: 16px;
+    text-transform: capitalize;
+    padding: 10px 35px;
+    color: #999;
+}
+
+a:link, a:visited, a:hover, a:focus, a:active {
+    color: inherit;
+    font-size: inherit;
+    text-decoration: none;
+    font-weight: none;
+}
+
+a#rejectButton {
+    display: inline-block;
+    padding: 20px 40px;
+    color: #fff;
+    background: #d9534f;
+}
+
+a#rejectButton:hover, a#rejectButton:focus {
+    background: #c9302c;
 }
 
 .numDisp-icon {
 	display: inline-block;
-	color: rgba(81, 203, 238, 1);
+	color: #999;
 	font-size: 28px;
-	margin: 0;
+	margin-left: 35px;
 	margin-right: 7px;
 }
 
 .numDisp-icon i.fa.fa-user {
-    color: rgba(81, 203, 238, 1);
+    color: #999;
 }
 
 #numDisp {
 	display: inline-block;
-	color: rgba(81, 203, 238, 1);
+	color: #999;
 	font-size: 28px;
 	margin: 0;
 }
 
 #content {
-    width: 498px;
-    height: 298px;
-    border: 1px solid #ccc;
-    padding: 10px 14px;
-    margin: 0 auto 20px auto;
+    width: 600px;
+    height: 300px;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 20px;
+    margin: 20px auto;
     overflow-y: scroll;
     word-break: normal;
-    border-radius: 5px;
 }
 
 p.chat-msg {
@@ -136,7 +166,7 @@ p.chat-msg {
 .prev-msgs-welcome-msg {
     width: 98%;
     color: rgba(81,203,238,1);
-    background: #fafafa;
+    background: #fff;
     text-align: center;
     display: block;
     padding: 1%;

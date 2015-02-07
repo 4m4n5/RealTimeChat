@@ -5,11 +5,8 @@ html
         script(src = '/jquery-1.11.1.min.js', type = 'text/javascript')
         script(src = '/chat.js', type = 'text/javascript')
         script(src = '/socket.io/socket.io.js', type = 'text/javascript')
-        script(src = '/skrollr.min.js', type = 'text/javascript')
-        script(src = '/nanoscroller.min.js', type = 'text/javascript')
         link(href = "/css/main.css", rel = "stylesheet")
         link(href = "/css/font-awesome.min.css", rel = "stylesheet")
-        link(href = "/css/nanoscroller.css", rel = "stylesheet")
         link(href = '//fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Open+Sans:700,300,600,400', rel='stylesheet', type = 'text/css')
     body
         .title Raven
@@ -17,13 +14,13 @@ html
             h1 Raven
             input#name(type = "text", placeholder = 'Enter Your Alias', tabindex = "1", autofocus)
         #topicBox
-            p Game of Thrones
-        .info-bar
-        #display-name
-            a#rejectButton(href="#") Reject
-            .numDisp-icon
-                i.fa.fa-user
-            #numDisp
+        .info-bar-back
+            .info-bar
+                #display-name
+                a#rejectButton(href="#") Reject Topic
+                .numDisp-icon
+                    i.fa.fa-user
+                #numDisp
         #content
             #prevMsgs
             #newMsgs
@@ -51,8 +48,6 @@ html
                     img(src="/pngs/confused.png", alt="Confused")
                 #emo-sunglasses.emo(tabindex="13")
                     img(src="/pngs/sunglasses.png", alt="Sunglasses")
-
-
                 #emo-kissing_heart.emo(tabindex="14")
                     img(src="/pngs/kissing_heart.png", alt="kissing_heart")
                 #emo-stuck_out_tongue.emo(tabindex="15")
