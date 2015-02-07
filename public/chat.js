@@ -249,6 +249,8 @@ window.onload = function() {
         if(e.keyCode === 13 && name.value) {
             $('#light-box').fadeOut(300);
             $('#field').focus();
+
+            document.getElementById('display-name').innerHTML = name.value;
         }
     });
  

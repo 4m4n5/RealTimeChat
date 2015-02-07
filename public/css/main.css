@@ -31,7 +31,6 @@ body {
     padding: 30px;
     color: rgba(81, 203, 238, 1);
     text-transform: uppercase;
-    /*text-shadow: 0 1px 7px #444;*/
 }
 
 #light-box {
@@ -55,11 +54,6 @@ body {
     font-family: 'Love Ya Like A Sister';
 }
 
-.info-wrapper {
-    margin: 20px auto;
-    text-align: center;
-}
-
 input#name{
     width: 300px;
     overflow: hidden;
@@ -72,8 +66,8 @@ input#name{
     -moz-transition: all 0.30s ease-in-out;
     -ms-transition: all 0.30s ease-in-out;
     -o-transition: all 0.30s ease-in-out;
-	transition: all 0.30s ease-in-out;
-	font-weight: 300;
+    transition: all 0.30s ease-in-out;
+    font-weight: 300;
     background: #eee;
 }
 
@@ -84,6 +78,25 @@ input#name:focus {
     -moz-box-shadow: 0px 0px 7px 1px rgba(81, 203, 238, 1);
     -o-box-shadow: 0px 0px 7px 1px rgba(81, 203, 238, 1);
     box-shadow: 0px 0px 7px 1px rgba(81, 203, 238, 1);
+}
+
+#topicBox {
+    padding: 20px;
+    background: -webkit-linear-gradient(90deg, #1D976C 10%, #93F9B9 90%); /* Chrome 10+, Saf5.1+ */
+    background: -moz-linear-gradient(90deg, #1D976C 10%, #93F9B9 90%); /* FF3.6+ */
+    background: -ms-linear-gradient(90deg, #1D976C 10%, #93F9B9 90%); /* IE10 */
+    background: -o-linear-gradient(90deg, #1D976C 10%, #93F9B9 90%); /* Opera 11.10+ */
+    background: linear-gradient(90deg, #1D976C 10%, #93F9B9 90%); /* W3C */
+}
+
+#topicBox p {
+    color: #fff;
+    font-size: 24px;
+    text-shadow: 0 1px 7px #444;
+}
+
+#display-name {
+    float: left;
 }
 
 .numDisp-icon {
@@ -214,12 +227,4 @@ input.send:focus {
 .emo img {
     width: 33px;
     margin: 0 auto;
-}
-
-#topicBox {
-    border: 1px solid black; 
-}
-
-#topicBox p {
-    border: 1px solid grey;
 }
