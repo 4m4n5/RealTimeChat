@@ -95,14 +95,77 @@ window.onload = function() {
         });
     });
     
-    //emoji integration
+//    emoji integration
 //    emojify.setConfig({img_dir:'/pngs'});
 //    emojify.run(document.getElementById('chat-msg'));
     
     var smile = document.getElementById('emo-smile');
+    var smiley = document.getElementById('emo-smiley');
+    var laughing = document.getElementById('emo-laughing');
+    var blush = document.getElementById('emo-blush');
+    var relaxed = document.getElementById('emo-relaxed');
+    var grin = document.getElementById('emo-grin');
+    var stuck_out_tongue_winking_eye = document.getElementById('emo-stuck_out_tongue_winking_eye');
+    var wink = document.getElementById('emo-wink');
+    var confused = document.getElementById('emo-confused');
+    var sunglasses = document.getElementById('emo-sunglasses');
     
     smile.onclick = addImage = function() {
         var html = '<img src= "pngs/smile.png">';
+        socket.emit('send', {message: html, name: name.value});
+        $('#field').focus();
+    }
+    
+    smiley.onclick = addImage = function() {
+        var html = '<img src= "pngs/smiley.png">';
+        socket.emit('send', {message: html, name: name.value});
+        $('#field').focus();
+    }
+    
+    laughing.onclick = addImage = function() {
+        var html = '<img src= "pngs/laughing.png">';
+        socket.emit('send', {message: html, name: name.value});
+        $('#field').focus();
+    }
+    
+    blush.onclick = addImage = function() {
+        var html = '<img src= "pngs/blush.png">';
+        socket.emit('send', {message: html, name: name.value});
+        $('#field').focus();
+    }
+    
+    relaxed.onclick = addImage = function() {
+        var html = '<img src= "pngs/relaxed.png">';
+        socket.emit('send', {message: html, name: name.value});
+        $('#field').focus();
+    }
+    
+    grin.onclick = addImage = function() {
+        var html = '<img src= "pngs/grin.png">';
+        socket.emit('send', {message: html, name: name.value});
+        $('#field').focus();
+    }
+    
+    stuck_out_tongue_winking_eye.onclick = addImage = function() {
+        var html = '<img src= "pngs/stuck_out_tongue_winking_eye.png">';
+        socket.emit('send', {message: html, name: name.value});
+        $('#field').focus();
+    }
+    
+    wink.onclick = addImage = function() {
+        var html = '<img src= "pngs/wink.png">';
+        socket.emit('send', {message: html, name: name.value});
+        $('#field').focus();
+    }
+    
+    confused.onclick = addImage = function() {
+        var html = '<img src= "pngs/confused.png">';
+        socket.emit('send', {message: html, name: name.value});
+        $('#field').focus();
+    }
+    
+    sunglasses.onclick = addImage = function() {
+        var html = '<img src= "pngs/sunglasses.png">';
         socket.emit('send', {message: html, name: name.value});
         $('#field').focus();
     }
