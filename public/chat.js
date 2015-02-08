@@ -1,4 +1,7 @@
 window.onload = function() {
+    
+    var objDiv = document.getElementById("content");
+    objDiv.scrollTop = objDiv.innerHeight;
 
     var messages = [];
     var serverBaseUrl = document.domain;
@@ -248,6 +251,11 @@ window.onload = function() {
         document.getElementById('topicBox').innerHTML = data.value;
         flag = 1;
         document.getElementById('topics-list').innerHTML = '';
+        
+        $('#light-box').fadeIn(300);
+        document.getElementById('topic-change').innerHTML = 'The current topic of discussion is - ' + data.value;
+        $('#name').focus();
+        
         socket.emit('topicList', {value: 1});
         setTimeout(function(){
             socket.emit('topic', {value: 42 });

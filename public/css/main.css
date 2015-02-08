@@ -56,14 +56,21 @@ body {
     font-family: 'Love Ya Like A Sister';
 }
 
+#topic-change {
+    width: 500px;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 18px;
+}
+
 input#name{
     width: 300px;
     overflow: hidden;
-    padding: 14px 22px;
+    padding: 10px 22px;
     border: 1px solid #fff;
-    border-radius: 29px;
+    border-radius: 30px;
     margin: 60px auto;
-    font-size: 20px;
+    font-size: 18px;
     -webkit-transition: all 0.30s ease-in-out;
     -moz-transition: all 0.30s ease-in-out;
     -ms-transition: all 0.30s ease-in-out;
