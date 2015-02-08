@@ -75,10 +75,10 @@ mongo.connect('mongodb://aman:thermo999@ds063870.mongolab.com:63870/chat', funct
             numRejects++;
             if (numRejects >= numUsers/3 || data.value == 42){
                 topicNum++;
-                time += (5*numUsers)*100;
-                setTimeout(function(){
-                    socket.emit('topic', {value: 42 });
-                },time);
+//                time += (5*numUsers)*100;
+//                setTimeout(function(){
+//                    socket.emit('topic', {value: 42 });
+//                },time);
                 if (topicNum === topics.length){
                     topicNum = 0;
                 }
