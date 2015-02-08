@@ -82,12 +82,12 @@ input#name:focus {
 
 #title {
     font-family: 'Love Ya Like A Sister';
-    padding: 20px;
-    background: -webkit-linear-gradient(90deg, #1D976C 10%, #93F9B9 90%); /* Chrome 10+, Saf5.1+ */
-    background: -moz-linear-gradient(90deg, #1D976C 10%, #93F9B9 90%); /* FF3.6+ */
-    background: -ms-linear-gradient(90deg, #1D976C 10%, #93F9B9 90%); /* IE10 */
-    background: -o-linear-gradient(90deg, #1D976C 10%, #93F9B9 90%); /* Opera 11.10+ */
-    background: linear-gradient(90deg, #1D976C 10%, #93F9B9 90%); /* W3C */
+    padding: 20px;    
+    background: -webkit-linear-gradient(90deg, #50C9C3 10%, #96DEDA 90%); /* Chrome 10+, Saf5.1+ */
+    background: -moz-linear-gradient(90deg, #50C9C3 10%, #96DEDA 90%); /* FF3.6+ */
+    background: -ms-linear-gradient(90deg, #50C9C3 10%, #96DEDA 90%); /* IE10 */
+    background: -o-linear-gradient(90deg, #50C9C3 10%, #96DEDA 90%); /* Opera 11.10+ */
+    background: linear-gradient(90deg, #50C9C3 10%, #96DEDA 90%); /* W3C */
     color: #fff;
     font-size: 30px;
     text-shadow: 0 1px 7px #444;
@@ -121,7 +121,7 @@ input#name:focus {
     font-size: 16px;
     text-transform: capitalize;
     padding: 10px 35px;
-    color: #999;
+    color: #444;
 }
 
 a:link, a:visited, a:hover, a:focus, a:active {
@@ -221,7 +221,7 @@ a#rejectButton:hover, a#rejectButton:focus {
 }
 
 #content {
-    width: 615px;
+    width: 715px;
     height: 300px;
     border-bottom: 1px solid #ccc;
     padding: 10px 20px;
@@ -292,18 +292,18 @@ input.field {
 }
 
 input.field:focus {
-    border-color: #EB3349 !important;
+    border-color: rgba(81,203,238,1) !important;
 }
 
 input.send {
     overflow: hidden;
     padding: 7px 20px;
-    border: 1px solid #EB3349;
+    border: 1px solid #fff;
     border-left-width: 0;
     border-top-right-radius: 100px;
     border-bottom-right-radius: 100px;
     margin: 0;
-    background: #EB3349;
+    background: rgba(81,203,238,1);
     color: #fff;
     text-transform: capitalize;
     cursor: pointer;
@@ -316,7 +316,7 @@ input.send {
 }
 
 input.send:focus {
-	background: #333;	
+	background: rgba(81,203,238,1);	
 }
 
 .emoticons {
@@ -348,7 +348,7 @@ input.send:focus {
 }
 
 .emo:hover, .emo:focus {
-    background: #EB3349;
+    background: rgba(81,203,238,1);
 }
 
 .emo img {
