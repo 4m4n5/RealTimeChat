@@ -33,6 +33,7 @@ body {
     color: rgba(81, 203, 238, 1);
     text-transform: uppercase;
     z-index: 500;
+    background: #333;
 }
 
 #light-box {
@@ -294,6 +295,7 @@ a#rejectButton:hover, a#rejectButton:focus {
     background: #333;
     z-index: 400;
     border-left: 1px solid #444;
+    overflow: auto;
 }
 
 #topics-list p {
@@ -316,7 +318,7 @@ a#rejectButton:hover, a#rejectButton:focus {
 }
 
 input.field {
-    width: 299px;
+    width: 314px;
     height: 20px;
     margin: 0;
     border: 1px solid #ccc;
@@ -362,7 +364,7 @@ input.send:focus {
 
 .emoticons {
     display: block;
-    width: 360px;
+    width: 375px;
     height: 98px;
     overflow-y: scroll;
     border: 1px solid #777;

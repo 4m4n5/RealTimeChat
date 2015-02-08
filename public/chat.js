@@ -1,7 +1,4 @@
 window.onload = function() {
-    
-    var objDiv = document.getElementById("content");
-    objDiv.scrollTop = objDiv.innerHeight;
 
     var messages = [];
     var serverBaseUrl = document.domain;
@@ -298,4 +295,6 @@ window.onload = function() {
             document.getElementById('display-name').innerHTML = name.value;
         }
     });
+
+    $('#content').scrollTop($('#content').prop('scrollHeight'));
 }
