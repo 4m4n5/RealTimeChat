@@ -17,7 +17,7 @@
 }
 
 body {
-    background: #fafafa;
+    background: #444;
 }
 
 .credits {
@@ -86,11 +86,14 @@ input#name:focus {
     position: relative;
     font-family: 'Love Ya Like A Sister';
     padding: 20px;    
-    background: -webkit-linear-gradient(90deg, #50C9C3 10%, #96DEDA 90%); /* Chrome 10+, Saf5.1+ */
-    background: -moz-linear-gradient(90deg, #50C9C3 10%, #96DEDA 90%); /* FF3.6+ */
-    background: -ms-linear-gradient(90deg, #50C9C3 10%, #96DEDA 90%); /* IE10 */
-    background: -o-linear-gradient(90deg, #50C9C3 10%, #96DEDA 90%); /* Opera 11.10+ */
-    background: linear-gradient(90deg, #50C9C3 10%, #96DEDA 90%); /* W3C */
+    /*background: -webkit-linear-gradient(90deg, #50C9C3 10%, #96DEDA 90%);
+    background: -moz-linear-gradient(90deg, #50C9C3 10%, #96DEDA 90%);
+    background: -ms-linear-gradient(90deg, #50C9C3 10%, #96DEDA 90%);
+    background: -o-linear-gradient(90deg, #50C9C3 10%, #96DEDA 90%);
+    background: linear-gradient(90deg, #50C9C3 10%, #96DEDA 90%);*/
+    background: url("../back.jpg") no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
     color: #fff;
     font-size: 30px;
     text-shadow: 0 1px 7px #444;
@@ -101,7 +104,7 @@ input#name:focus {
 
 .info-bar-back {
     position: relative;
-    background: #fff;
+    background: #333;
     text-align: center;
     z-index: 600;
 }
@@ -117,8 +120,7 @@ input#name:focus {
     font-size: 16px;
     text-transform: capitalize;
     padding: 10px 35px;
-    color: #999;
-    border-right: 1px solid #ddd;
+    color: #ddd;
 }
 
 #topicBox {
@@ -127,7 +129,8 @@ input#name:focus {
     font-size: 16px;
     text-transform: capitalize;
     padding: 10px 35px;
-    color: #444;
+    color: #fff;
+    background: #d9534f; 
 }
 
 a:link, a:visited, a:hover, a:focus, a:active {
@@ -141,7 +144,7 @@ a#rejectButton {
     display: inline-block;
     padding: 20px;
     color: #fff;
-    background: #d9534f;
+    background: #c9302c;
 }
 
 a#rejectButton i.fa {
@@ -161,8 +164,8 @@ a#rejectButton:hover, a#rejectButton:focus {
     margin: 0;
     border: 1px solid #ccc;
     border-right-width: 0;
-    border-top-left-radius: 100px;
-    border-bottom-left-radius: 100px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
     padding: 7px 14px;
     font-weight: 300;
     -webkit-transition: all 0.30s ease-in-out;
@@ -184,8 +187,8 @@ a#rejectButton:hover, a#rejectButton:focus {
     padding: 7px 20px;
     border: 1px solid rgba(81, 203, 238, 1);
     border-left-width: 0;
-    border-top-right-radius: 100px;
-    border-bottom-right-radius: 100px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
     margin: 0;
     background: rgba(81, 203, 238, 1);
     color: #fff;
@@ -209,19 +212,19 @@ a#rejectButton:hover, a#rejectButton:focus {
 
 .numDisp-icon {
 	display: inline-block;
-	color: #999;
+	color: #ddd;
 	font-size: 28px;
 	margin-left: 35px;
 	margin-right: 7px;
 }
 
 .numDisp-icon i.fa {
-    color: #999;
+    color: #ccc;
 }
 
 #numDisp {
 	display: inline-block;
-	color: #999;
+	color: #ddd;
 	font-size: 28px;
 	margin: 0;
 }
@@ -229,7 +232,7 @@ a#rejectButton:hover, a#rejectButton:focus {
 #content {
     width: 715px;
     height: 300px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #555;
     padding: 10px 20px;
     margin: 20px auto;
     overflow-y: scroll;
@@ -250,29 +253,28 @@ a#rejectButton:hover, a#rejectButton:focus {
     padding: 7px 12px;
     border-radius: 17px;
     font-size: 14px;
-    color: #333;
-    background: #f0f9a0;
+    color: #fff;
+    background: rgba(81,203,238,1);
     text-align: center;
+    text-transform: capitalize;
 }
 
 .user-msg {
     max-width: 460px;
     float: left;
     overflow: hidden;
-    background: #fff;
+    background: #eee;
     padding: 7px 12px;
     margin-left: 10px;
     border-radius: 3px;
-    border: 1px solid #eee;
+    border: 1px solid #777;
 }
 
 .prev-msgs-welcome-msg {
-    width: 98%;
-    color: rgba(81,203,238,1);
-    background: #fff;
+    color: #444;
+    padding: 0 40px;
     text-align: center;
     display: block;
-    padding: 1%;
 }
 
 #topics-list {
@@ -282,23 +284,23 @@ a#rejectButton:hover, a#rejectButton:focus {
     right: 0;
     top: 0;
     padding-top: 138px;
-    background: #fff;
+    background: #333;
     z-index: 400;
-    border-left: 1px solid #eee;
+    border-left: 1px solid #444;
 }
 
 #topics-list p {
-    color: #777;
+    color: #fff;
     padding: 14px;
-    border-top: 1px solid #eee;
+    border-top: 1px solid #444;
 }
 
 #topics-list p:hover {
-    background: #eee;
+    background: #393939;
 }
 
 #topics-list p:last-of-type {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #444;
 }
 
 .controls {
@@ -356,10 +358,10 @@ input.send:focus {
     width: 360px;
     height: 98px;
     overflow-y: scroll;
-    border: 1px solid #ccc;
+    border: 1px solid #777;
     border-top-width: 0;
     padding: 2px;
-    background: #fff;
+    background: #999;
     border-bottom-right-radius: 4px;
     border-bottom-left-radius: 4px;
     margin: 0 auto;
@@ -370,7 +372,7 @@ input.send:focus {
     margin: 2px;
     padding: 4px;
     text-align: center;
-    background: #fafafa;
+    background: #7f7f7f;
     float: left;
     cursor: pointer;
     -webkit-transition: all 0.20s ease-in-out;
@@ -381,7 +383,8 @@ input.send:focus {
 }
 
 .emo:hover, .emo:focus {
-    background: rgba(81,203,238,1);
+    /*background: rgba(81,203,238,1);*/
+    background: #333;
 }
 
 .emo img {
