@@ -261,6 +261,8 @@ window.onload = function() {
         if(topicField.value){
             socket.emit('appendTopic', {value: topicField.value});
             topicField.value = '';
+            document.getElementById('topics-list').innerHTML = '';
+            socket.emit('topicList', {value: 1});
         }
     };
     
