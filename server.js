@@ -99,11 +99,11 @@ mongo.connect('mongodb://aman:thermo999@ds063870.mongolab.com:63870/chat', funct
         socket.on('topicList', function(data){
             for(var i = topicNum + 1; i < topics.length; i++ ){
                 socket.emit('topicListElement', {value: topics[i]});
-                socket.broadcast.emit('topicListElement', {value: topics[i]});
+//                socket.broadcast.emit('topicListElement', {value: topics[i]});
             }
             for(var j = 0; j <= topicNum; j++ ){
                 socket.emit('topicListElement', {value: topics[j]});
-                socket.broadcast.emit('topicListElement', {value: topics[i]});
+//                socket.broadcast.emit('topicListElement', {value: topics[i]});
             }
         });
         
