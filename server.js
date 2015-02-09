@@ -31,7 +31,7 @@ var numRejects = 0;
 var topics = ["Game of Thrones", "Star Wars", "Star Trek", "Interstellar"];
 var topicPriority = [1, 1, 1, 1];
 var topicNum = 0;
-var time = (5)*100;
+var time = (5)*1000*60;
 
 
  
@@ -75,10 +75,10 @@ mongo.connect('mongodb://aman:thermo999@ds063870.mongolab.com:63870/chat', funct
             numRejects++;
             if (numRejects >= numUsers/3 || data.value == 42){
                 topicNum++;
-//                time += (5*numUsers)*100;
-//                setTimeout(function(){
-//                    socket.emit('topic', {value: 42 });
-//                },time);
+                time += (5*numUsers)*1000*60;
+                setTimeout(function(){
+                    socket.emit('topic', {value: 42 });
+                },time);
                 if (topicNum === topics.length){
                     topicNum = 0;
                 }
