@@ -254,9 +254,6 @@ window.onload = function() {
         $('#name').focus();
         
         socket.emit('topicList', {value: 1});
-        setTimeout(function(){
-            socket.emit('topic', {value: 42 });
-        },data.time);
     });
     
 //  taking in new topic
