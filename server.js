@@ -54,6 +54,7 @@ mongo.connect('mongodb://aman:thermo999@ds063870.mongolab.com:63870/chat', funct
         
         //showing no of users on connection
         numUsers += 1;
+		time += (5)*1000*60;
         socket.emit('userNum',{ userNum: numUsers });
         socket.broadcast.emit('userNum',{ userNum: numUsers });
         
@@ -75,7 +76,6 @@ mongo.connect('mongodb://aman:thermo999@ds063870.mongolab.com:63870/chat', funct
             numRejects++;
             if (numRejects >= numUsers/3 || data.value == 42){
                 topicNum++;
-                time += (5*numUsers)*1000*60;
                 setTimeout(function(){
                     socket.emit('topic', {value: 42 });
                 },time);
@@ -110,6 +110,7 @@ mongo.connect('mongodb://aman:thermo999@ds063870.mongolab.com:63870/chat', funct
         //on disconnection
         socket.on('disconnect', function(){
             numUsers -= 1;
+			time -= (5)*1000*60;
             socket.broadcast.emit('userNum', { userNum: numUsers });
         });
     });
